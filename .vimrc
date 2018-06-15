@@ -34,6 +34,8 @@ let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard | uniq']
 
 let g:ctrlp_match_func = { 'match': 'GoodMatch' }
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 
 " autocmd BufWritePre * :%s/\s\+$//e
 function! <SID>StripTrailingWhitespaces()
