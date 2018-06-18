@@ -27,15 +27,7 @@ set laststatus=2
 "%m file modified flag ([+] when there are unsaved changes)
 set statusline=%F\ %l:%c\ %m
 
-
-" matcher comes from GH: burke/matcher
-let g:path_to_matcher = "/usr/local/bin/matcher"
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard | uniq']
-
-let g:ctrlp_match_func = { 'match': 'GoodMatch' }
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
 
 " autocmd BufWritePre * :%s/\s\+$//e
 function! <SID>StripTrailingWhitespaces()
